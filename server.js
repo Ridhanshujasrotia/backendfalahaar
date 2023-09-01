@@ -4,7 +4,7 @@ const server = express();
 const bodyParser = require("body-parser");
 // getting-started.js
 const mongoose = require("mongoose");
-
+const PORT = process.env.PORT || 6060;
 const uri =
   "mongodb+srv://jamwalpratham2017352:Pratham%40123@cluster0.tki7jb2.mongodb.net/?retryWrites=true&w=majority";
 
@@ -63,7 +63,7 @@ server.post("/demo", async (req, res) => {
         res.json(docs)
     })
     */
-server.listen(6060, () => {
+server.listen(PORT, () => {
   console.log("server started");
 });
 
